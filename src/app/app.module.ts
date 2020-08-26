@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ComponentsModule } from './components/components.module'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -48,8 +48,7 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     NbDialogModule,
     NbToastrModule,
     NbToastrService,
-    NbWindowModule,
-    ComponentsModule
+    NbWindowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
