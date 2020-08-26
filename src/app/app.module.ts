@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ComponentsModule } from './components/components.module'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -11,10 +11,6 @@ import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { LoginComponent } from './components/header/login/login.component'
 import {
   NbSidebarModule,
   NbSidebarService,
@@ -25,15 +21,14 @@ import {
   NbToastrService,
   NbWindowModule
 } from '@nebular/theme';
+import { MainPageComponent } from './pages/main-page/main-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    LoginComponent
+
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +48,8 @@ import {
     NbDialogModule,
     NbToastrModule,
     NbToastrService,
-    NbWindowModule
+    NbWindowModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
